@@ -1,0 +1,15 @@
+@import url("./constant.css");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    font-weight: 200;
+    font-size: 16px;
+    max-width: 1200px;
+    margin: 56px auto;
+}
