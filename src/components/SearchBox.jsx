@@ -3,13 +3,16 @@ import { IoSearchOutline } from "react-icons/io5";
 
 const SearchBox = () => {
     return (
-        <div className=" w-full h-10 flex gap-4 mb-14">
+        <div className=" w-full h-10 flex justify-between mb-14">
             <input
                 type="text"
                 placeholder="Enter Movie Name..."
-                className="w-[80%] outline-none box-shadow px-6 py-2 rounded-lg text-lg"
+                className="w-[78%] outline-none box-shadow-input px-6 py-2 rounded-lg text-lg "
             />
-            <IoSearchOutline className="w-10 h-full bg-primaryColor text-white rounded-lg px-1 text-shadow cursor-pointer transition hover:scale-110" />
+            <span className="w-[20%] h-full rounded-full searchBoxShadow flex items-center justify-center gap-3 text-white bg-primaryColor cursor-pointer transition hover:scale-110">
+                <p className="text-2xl">Search</p>
+                <IoSearchOutline className="w-10 h-full rounded-lg px-1 text-shadow " />
+            </span>
         </div>
     );
 };

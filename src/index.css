@@ -41,10 +41,18 @@
     .box-shadow {
         box-shadow: 1px 1px 5px rgb(85, 85, 85), -1px -1px 5px rgb(85, 85, 85);
     }
+    .box-shadow-input {
+        box-shadow: 1px 1px 5px rgba(85, 85, 85, 0.37),
+            -1px -1px 5px rgba(85, 85, 85, 0.445);
+    }
 
-    .cardShadow {
+    .hoverCardShadow {
         box-shadow: 1px 1px 5px rgb(124, 58, 237),
             -1px -1px 5px rgb(124, 58, 237);
+    }
+    .cardShadow {
+        box-shadow: 1px 1px 5px rgb(196, 179, 224),
+            -1px -1px 5px rgb(196, 173, 236);
     }
 
     .text-shadow {
@@ -64,6 +72,10 @@
         color: #ffffff;
         text-shadow: 1px 1px 1px #0f0f0f;
     }
+    .searchBoxShadow {
+        box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.493),
+            -1px -1px 2px rgba(0, 0, 0, 0.253);
+    }
 }
 
 * {
@@ -74,5 +86,5 @@
 
 body {
     font-family: "Roboto-Regular";
-    background-color: #e5d6ff;
+    background-color: #bdc97bb4;
 }

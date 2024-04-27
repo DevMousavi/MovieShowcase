@@ -6,12 +6,29 @@ import PapularMovie from "./pages/PapularMovie.jsx";
 import PapularPeople from "./pages/PapularPeople.jsx";
 import Login from "./components/Login.jsx";
 import SingUp from "./components/SingUp.jsx";
+import TopRated from "./pages/TopRated.jsx";
+import TopRatedMovieContextProvider from "./context/TopRatedMovieContext.jsx";
 
 const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route index element={<Home />} />
+                <Route
+                    index
+                    element={
+                        <TopRatedMovieContextProvider>
+                            <Home />
+                        </TopRatedMovieContextProvider>
+                    }
+                />
+                <Route
+                    path="top-rated"
+                    element={
+                        <TopRatedMovieContextProvider>
+                            <TopRated />
+                        </TopRatedMovieContextProvider>
+                    }
+                />
                 <Route path="/papular-movie" element={<PapularMovie />} />
                 <Route path="/papular-people" element={<PapularPeople />} />
                 <Route path="/login" element={<Login />} />
