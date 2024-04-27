@@ -38,6 +38,10 @@
 }
 
 @layer components {
+    .box-shadow {
+        box-shadow: 1px 1px 5px rgb(85, 85, 85), -1px -1px 5px rgb(85, 85, 85);
+    }
+
     .text-shadow {
         text-shadow: 1px 1px 1px #0f0f0f;
     }
@@ -65,5 +69,5 @@
 
 body {
     font-family: "Roboto-Regular";
-    border: 2px solid rgb(83, 83, 83);
+    background-color: #e5d6ff;
 }
