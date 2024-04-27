@@ -11,7 +11,6 @@ export default {
         },
         container: {
             center: true,
-            padding: "2rem",
         },
         screens: {
             am: "350px",
@@ -20,7 +19,14 @@ export default {
             lg: "1024px",
             xl: "1280px",
         },
-        extend: {},
+        extend: {
+            boxShadow: {
+                primaryShadow: "-1px -1px 8px #607D8B",
+            },
+            colors: {
+                primaryColor: "rgb(124, 58, 237)",
+            },
+        },
     },
     plugins: [],
 };

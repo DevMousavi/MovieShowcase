@@ -37,6 +37,26 @@
     }
 }
 
+@layer components {
+    .text-shadow {
+        text-shadow: 1px 1px 1px #0f0f0f;
+    }
+    .transition-Primary {
+        transition: all 0.25s ease-in;
+    }
+    .btn {
+        transition: all 0.25s ease-in;
+        padding: 8px 16px;
+        cursor: pointer;
+        border-radius: 12px;
+    }
+    .btn-Hover {
+        background-color: rgb(124, 58, 237);
+        color: #ffffff;
+        text-shadow: 1px 1px 1px #0f0f0f;
+    }
+}
+
 * {
     margin: 0px;
     padding: 0px;
