@@ -1,4 +1,41 @@
-@import url("./constant.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Roboto-Regular";
+        src: local(
+            "Roboto-Regular",
+            "RobotoRegular",
+            "roboto-regular",
+            "robotoregular"
+        );
+        src: url("./assets/Fonts_ttf/Roboto-Regular.ttf") format("truetype");
+        font-weight: 200;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "Roboto-Medium";
+        src: local(
+            "Roboto-Medium",
+            "RobotoMedium",
+            "roboto-medium",
+            "robotomedium"
+        );
+        src: url("./assets/Fonts_ttf/Roboto-Medium.ttf") format("truetype");
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Roboto-Bold";
+        src: local("Roboto-Bold", "RobotoBold", "roboto-bold", "robotboldo");
+        src: url("./assets/Fonts_ttf/Roboto-Bold.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+    }
+}
 
 * {
     margin: 0px;
@@ -7,9 +44,6 @@
 }
 
 body {
-    font-family: "Roboto";
-    font-weight: 200;
-    font-size: 16px;
-    max-width: 1200px;
-    margin: 56px auto;
+    font-family: "Roboto-Regular";
+    border: 2px solid rgb(83, 83, 83);
 }
