@@ -42,6 +42,11 @@
         box-shadow: 1px 1px 5px rgb(85, 85, 85), -1px -1px 5px rgb(85, 85, 85);
     }
 
+    .cardShadow {
+        box-shadow: 1px 1px 5px rgb(124, 58, 237),
+            -1px -1px 5px rgb(124, 58, 237);
+    }
+
     .text-shadow {
         text-shadow: 1px 1px 1px #0f0f0f;
     }

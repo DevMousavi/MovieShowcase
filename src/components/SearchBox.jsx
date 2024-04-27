@@ -3,7 +3,7 @@ import { IoSearchOutline } from "react-icons/io5";
 
 const SearchBox = () => {
     return (
-        <div className=" w-full h-10 flex gap-4">
+        <div className=" w-full h-10 flex gap-4 mb-14">
             <input
                 type="text"
                 placeholder="Enter Movie Name..."
