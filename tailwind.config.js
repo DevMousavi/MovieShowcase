@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ["./index.html", "./src/**/*.{js,jsx,tsx}"],
+    darkMode: "class",
     theme: {
         fontFamily: {
             Roboto: {
@@ -25,6 +26,10 @@ export default {
             },
             colors: {
                 primaryColor: "rgb(124, 58, 237)",
+                primaryColorDark_Dark: "#1e202e",
+                primaryColorDark_Light: "#313d7093",
+                primaryColorYellow: "#FBC02D",
+                primaryColor_Pink: "#E8346C",
             },
         },
     },

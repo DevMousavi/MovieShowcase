@@ -4,7 +4,7 @@ import { baseURLImage } from "../sevices/config.js";
 const CardPeopleShow = (props) => {
     return (
         <div>
-            <div className="flex flex-col cardShadow transition hover:hoverCardShadow w-72 py-6 rounded-xl">
+            <div className="flex flex-col cardShadow transition hover:hoverCardShadow w-72 py-6 rounded-xl  dark:bg-[#2a424d] dark:cardShadowDarkMode dark:hover:hoverCardShadowDarkMode">
                 <img
                     src={baseURLImage + props.img}
                     alt=""
@@ -12,12 +12,9 @@ const CardPeopleShow = (props) => {
                 />
 
                 <span className="w-60 m-auto">
-                    <h3 className="text-primaryColor name-shadow font-bold text-xl mb-1 mt-8">
+                    <h3 className="text-primaryColor name-shadow font-bold text-xl mb-1 mt-8 dark:text-primaryColorYellow">
                         {props.name}
                     </h3>
-                    <span>
-                        <h3 className="text-sm mt-3 mb-2">Papular Movie:</h3>
-                    </span>
                 </span>
             </div>
         </div>
