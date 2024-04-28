@@ -8,6 +8,7 @@ import Login from "./components/Login.jsx";
 import SingUp from "./components/SingUp.jsx";
 import TopRated from "./pages/TopRated.jsx";
 import TopRatedMovieContextProvider from "./context/TopRatedMovieContext.jsx";
+import PapularMovieContextProvider from "./context/PapularMovieContext.jsx";
 
 const App = () => {
     return (
@@ -29,7 +30,14 @@ const App = () => {
                         </TopRatedMovieContextProvider>
                     }
                 />
-                <Route path="/papular-movie" element={<PapularMovie />} />
+                <Route
+                    path="/papular-movie"
+                    element={
+                        <PapularMovieContextProvider>
+                            <PapularMovie />
+                        </PapularMovieContextProvider>
+                    }
+                />
                 <Route path="/papular-people" element={<PapularPeople />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/sing-up" element={<SingUp />} />

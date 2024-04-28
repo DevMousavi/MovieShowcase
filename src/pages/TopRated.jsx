@@ -21,8 +21,8 @@ const TopRated = () => {
             }
         };
         fetchData();
-        console.log(primaryData);
-        console.log(data);
+        // console.log(primaryData);
+        // console.log(data);
     }, [primaryData]);
 
     return (
