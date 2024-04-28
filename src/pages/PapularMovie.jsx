@@ -29,7 +29,6 @@ const PapularMovie = () => {
         <main>
             <Header />
             <main className="w-full flex flex-wrap justify-between gap-y-10">
-                {" "}
                 {loading ? (
                     <h1>Loading</h1>
                 ) : (

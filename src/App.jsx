@@ -9,6 +9,7 @@ import SingUp from "./components/SingUp.jsx";
 import TopRated from "./pages/TopRated.jsx";
 import TopRatedMovieContextProvider from "./context/TopRatedMovieContext.jsx";
 import PapularMovieContextProvider from "./context/PapularMovieContext.jsx";
+import PapularPeopleContextProvider from "./context/PapularPeopleContext.jsx";
 
 const App = () => {
     return (
@@ -38,7 +39,14 @@ const App = () => {
                         </PapularMovieContextProvider>
                     }
                 />
-                <Route path="/papular-people" element={<PapularPeople />} />
+                <Route
+                    path="/papular-people"
+                    element={
+                        <PapularPeopleContextProvider>
+                            <PapularPeople />
+                        </PapularPeopleContextProvider>
+                    }
+                />
                 <Route path="/login" element={<Login />} />
                 <Route path="/sing-up" element={<SingUp />} />
                 <Route path="*" element={<ErrorHandler />} />

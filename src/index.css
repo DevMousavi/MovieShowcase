@@ -58,6 +58,9 @@
     .text-shadow {
         text-shadow: 1px 1px 1px #0f0f0f;
     }
+    .name-shadow {
+        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.363);
+    }
     .transition-Primary {
         transition: all 0.25s ease-in;
     }
