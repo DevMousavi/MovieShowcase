@@ -19,18 +19,18 @@ const NumberPageHandler = (props) => {
         <div className="w-80 mx-auto my-6 flex flex-row items-center justify-center py-1 text-3xl dark:text-white">
             <button
                 onClick={lowNumber}
-                className=" transition rounded-xl hover:bg-primaryColor hover:text-white dark:hover:bg-primaryColor_Pink"
+                className=" transition rounded-xl hover:bg-primaryColor hover:text-white "
             >
                 <MdKeyboardArrowLeft />
             </button>
             <span>...</span>
-            <p className="text-xl  bg-primaryColor px-2 rounded-full dark:bg-yellow-700">
+            <p className="text-xl  bg-primaryColor px-2 rounded-full dark:bg-primaryBackGround_Light">
                 {props.numberPage}
             </p>
             <span>...</span>
             <button
                 onClick={plusNumberHandler}
-                className=" transition rounded-xl hover:bg-primaryColor hover:text-white dark:hover:bg-primaryColor_Pink"
+                className=" transition rounded-xl hover:bg-primaryColor hover:text-white"
             >
                 <MdKeyboardArrowRight />
             </button>

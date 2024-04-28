@@ -9,19 +9,19 @@ const Footer = () => {
             <a
                 href="https://t.me/DevMousavi"
                 target="_blank"
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 dark:transition-Primary dark:hover:text-white"
             >
                 <FaTelegram />
                 DevMousavi
             </a>
-            <span className="flex items-center gap-[2px]">
+            <span className="flex items-center gap-[2px] dark:transition-Primary dark:hover:text-white">
                 <BiLogoGmail />
                 mousavii.dev@gmail.com
             </span>
             <a
                 href="https://github.com/DevMousavi"
                 target="_blank"
-                className="flex items-center gap-[2px] "
+                className="flex items-center gap-[2px] dark:transition-Primary dark:hover:text-white"
             >
                 <FaGithub /> DevMousavi
             </a>

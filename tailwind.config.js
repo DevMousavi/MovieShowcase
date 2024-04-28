@@ -27,7 +27,7 @@ export default {
             colors: {
                 primaryColor: "rgb(124, 58, 237)",
                 primaryBackGround: "#030303",
-                primaryBackGround_Light: "#423e37",
+                primaryBackGround_Light: "#183D3D",
             },
         },
     },
