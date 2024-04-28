@@ -37,7 +37,7 @@ const Home = () => {
                 </h5>
                 <NavLink to="top-rated">
                     {" "}
-                    <p className="text-xl cursor-pointer transition-Primary text-primaryColor font-bold  border-primaryColor px-5 py-1 rounded-xl hover:text-black hover:scale-110 dark:text-primaryColorYellow dark:hover:text-primaryColor_Pink ">
+                    <p className="text-xl cursor-pointer transition-Primary text-primaryColor font-bold  border-primaryColor px-5 py-1 rounded-xl hover:text-black hover:scale-110 dark:hover:text-white ">
                         More...
                     </p>
                 </NavLink>
