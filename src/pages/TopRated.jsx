@@ -3,17 +3,19 @@ import Header from "../Layout/Header.jsx";
 import Footer from "../Layout/Footer.jsx";
 import Card from "../components/Card.jsx";
 import { TopRatedMovieContext } from "../context/TopRatedMovieContext.jsx";
+import NumberPageHandler from "../components/NumberPageHandler.jsx";
 
 const TopRated = () => {
     const primaryData = useContext(TopRatedMovieContext);
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [numberPage, setNumberPage] = useState(1);
 
     useEffect(() => {
         const fetchData = () => {
             try {
-                if (primaryData && primaryData.results) {
-                    setData(primaryData.results);
+                if (primaryData.data && primaryData.data.results) {
+                    setData(primaryData.data.results);
                     setLoading(false);
                 }
             } catch (error) {
@@ -21,9 +23,11 @@ const TopRated = () => {
             }
         };
         fetchData();
-        // console.log(primaryData);
-        // console.log(data);
     }, [primaryData]);
+
+    useEffect(() => {
+        primaryData.setPageNumber(numberPage);
+    }, [numberPage, primaryData.PageNumber]);
 
     return (
         <>
@@ -46,6 +50,11 @@ const TopRated = () => {
                 </div>
                 <div></div>
             </main>
+            <NumberPageHandler
+                numberPage={numberPage}
+                setNumberPage={setNumberPage}
+                number={numberPage}
+            />
             <Footer />
         </>
     );

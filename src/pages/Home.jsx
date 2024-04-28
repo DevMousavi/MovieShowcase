@@ -15,8 +15,8 @@ const Home = () => {
     useEffect(() => {
         const fetchData = () => {
             try {
-                if (primaryData && primaryData.results) {
-                    setData(primaryData.results);
+                if (primaryData.data && primaryData.data.results) {
+                    setData(primaryData.data.results);
                     setLoading(false);
                 }
             } catch (error) {
@@ -24,8 +24,6 @@ const Home = () => {
             }
         };
         fetchData();
-        console.log(primaryData);
-        console.log(data);
     }, [primaryData]);
 
     return (

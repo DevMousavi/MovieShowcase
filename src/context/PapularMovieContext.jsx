@@ -5,12 +5,13 @@ import { createContext } from "react";
 const PapularMovieContext = createContext();
 const PapularMovieContextProvider = ({ children }) => {
     const [data, setData] = useState([]);
+    const [numberPage, setNumberPage] = useState(1);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await api.get(
-                    `/movie/popular?${apiKey}&page=${1}`
+                    `/movie/popular?${apiKey}&page=${numberPage}`
                 );
                 setData(response);
             } catch (error) {
@@ -18,10 +19,12 @@ const PapularMovieContextProvider = ({ children }) => {
             }
         };
         fetchData();
-    }, []);
+    }, [numberPage]);
 
     return (
-        <PapularMovieContext.Provider value={data}>
+        <PapularMovieContext.Provider
+            value={{ data, numberPage, setNumberPage }}
+        >
             {children}
         </PapularMovieContext.Provider>
     );

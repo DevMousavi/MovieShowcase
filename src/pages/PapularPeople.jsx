@@ -3,26 +3,31 @@ import Header from "../Layout/Header.jsx";
 import Footer from "../Layout/Footer.jsx";
 import CardPeopleShow from "../components/CardPeopleShow.jsx";
 import { PapularPeopleContext } from "../context/PapularPeopleContext.jsx";
+import NumberPageHandler from "../components/NumberPageHandler.jsx";
 
 const PapularPeople = () => {
     const primaryData = useContext(PapularPeopleContext);
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [numberPage, setNumberPage] = useState(1);
+
+    useEffect(() => {
+        primaryData.setPage(numberPage);
+    }, [numberPage, primaryData.setPage]);
 
     useEffect(() => {
         const fetchData = () => {
             try {
-                if (primaryData && primaryData.results) {
-                    setData(primaryData.results);
+                if (primaryData.data && primaryData.data.results) {
+                    setData(primaryData.data.results);
                     setLoading(false);
                 }
             } catch (error) {
                 console.log(error);
             }
         };
+
         fetchData();
-        console.log(primaryData);
-        // console.log(data);
     }, [primaryData]);
     return (
         <>
@@ -34,17 +39,19 @@ const PapularPeople = () => {
                     data.map((item) => (
                         <CardPeopleShow
                             key={item.id}
-                            movie1={item.known_for[0].original_title}
-                            movie2={item.known_for[1].original_title}
-                            movie3={item.known_for[2].original_title}
                             name={item.original_name}
                             img={item.profile_path}
                         />
                     ))
                 )}
-
-                <Footer />
             </main>
+            {/* <button onClick={numberPageHandler}>Click Me</button> */}
+            <NumberPageHandler
+                numberPage={numberPage}
+                setNumberPage={setNumberPage}
+                number={numberPage}
+            />
+            <Footer />
         </>
     );
 };

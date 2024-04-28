@@ -3,17 +3,19 @@ import Header from "../Layout/Header.jsx";
 import Footer from "../Layout/Footer.jsx";
 import { PapularMovieContext } from "../context/PapularMovieContext.jsx";
 import Card from "../components/Card.jsx";
+import NumberPageHandler from "../components/NumberPageHandler.jsx";
 
 const PapularMovie = () => {
     const primaryData = useContext(PapularMovieContext);
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [numberPage, setNumberPage] = useState(1);
 
     useEffect(() => {
         const fetchData = () => {
             try {
-                if (primaryData && primaryData.results) {
-                    setData(primaryData.results);
+                if (primaryData.data && primaryData.data.results) {
+                    setData(primaryData.data.results);
                     setLoading(false);
                 }
             } catch (error) {
@@ -21,12 +23,14 @@ const PapularMovie = () => {
             }
         };
         fetchData();
-        // console.log(primaryData);
-        // console.log(data);
     }, [primaryData]);
 
+    useEffect(() => {
+        primaryData.setNumberPage(numberPage);
+    }, [numberPage, primaryData.setPage]);
+
     return (
-        <main>
+        <>
             <Header />
             <main className="w-full flex flex-wrap justify-between gap-y-10">
                 {loading ? (
@@ -43,8 +47,13 @@ const PapularMovie = () => {
                     ))
                 )}
             </main>
+            <NumberPageHandler
+                numberPage={numberPage}
+                setNumberPage={setNumberPage}
+                number={numberPage}
+            />
             <Footer />
-        </main>
+        </>
     );
 };
 

@@ -17,20 +17,6 @@ const CardPeopleShow = (props) => {
                     </h3>
                     <span>
                         <h3 className="text-sm mt-3 mb-2">Papular Movie:</h3>
-                        <span>
-                            <h4
-                                title="About"
-                                className="text-gray-600 text-xs hover:scale-110"
-                            >
-                                I.{props.movie1}
-                            </h4>
-                            <h4 title="About" className="text-gray-600 text-xs">
-                                II.{props.movie2}
-                            </h4>
-                            <h4 title="About" className="text-gray-600 text-xs">
-                                III.{props.movie3}
-                            </h4>
-                        </span>
                     </span>
                 </span>
             </div>
