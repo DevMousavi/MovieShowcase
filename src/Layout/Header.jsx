@@ -4,7 +4,7 @@ import { FaMoon } from "react-icons/fa";
 
 const Header = () => {
     return (
-        <header className="w-full grid grid-flow-col grid-cols-2 items-center justify-between px-14 py-2 font-bold shadow-primaryShadow rounded-xl ">
+        <header className="w-full grid grid-flow-col grid-cols-2 items-center justify-between px-14 py-2 mb-14 font-bold shadow-primaryShadow rounded-xl ">
             <ul className="flex items-center gap-7 text-primaryColor">
                 <li>
                     <NavLink to="/">
