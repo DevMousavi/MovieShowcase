@@ -5,7 +5,7 @@ import { baseURLImage } from "../sevices/config.js";
 const Card = (props) => {
     const image = baseURLImage + props.img;
     return (
-        <div className="flex flex-col relative cardShadow transition hover:hoverCardShadow w-72 py-6 rounded-xl dark:bg-primaryBackGround_Light">
+        <div className="flex flex-col relative cardShadow transition hover:hoverCardShadow w-72 py-6 rounded-xl dark:bg-gray-900 dark:hover:hoverCardShadowDark">
             <img src={image} alt="" className="w-60 h-72 m-auto rounded-lg" />
             <p
                 title="User Score"

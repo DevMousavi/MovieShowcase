@@ -32,12 +32,12 @@ const Home = () => {
             <WelcomeText />
             <SearchBox />
             <div className="mb-8 flex flex-row justify-between">
-                <h5 className="text-3xl text-primaryColor font-bold dark:text-primaryColorYellow">
+                <h5 className="text-3xl text-primaryColor font-bold dark:text-primaryColorYellow dark:text-gray-300">
                     Top Rated <span className="font-bold text-2xl">...</span>
                 </h5>
                 <NavLink to="top-rated">
                     {" "}
-                    <p className="text-xl cursor-pointer transition-Primary text-primaryColor font-bold  border-primaryColor px-5 py-1 rounded-xl hover:text-black hover:scale-110 dark:hover:text-white ">
+                    <p className="text-xl cursor-pointer transition-Primary text-primaryColor font-bold  border-primaryColor px-5 py-1 rounded-xl hover:text-black hover:scale-110 dark:text-gray-300 dark:hover:text-pink-700 ">
                         More...
                     </p>
                 </NavLink>

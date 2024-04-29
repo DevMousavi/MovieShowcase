@@ -50,6 +50,10 @@
         box-shadow: 1px 1px 5px rgb(124, 58, 237),
             -1px -1px 5px rgb(124, 58, 237);
     }
+    .hoverCardShadowDark {
+        box-shadow: 1px 1px 5px rgb(190, 24, 93), -1px -1px 5px rgb(190, 24, 93);
+    }
+
     .cardShadow {
         box-shadow: 1px 1px 5px rgb(196, 179, 224),
             -1px -1px 5px rgb(196, 173, 236);
