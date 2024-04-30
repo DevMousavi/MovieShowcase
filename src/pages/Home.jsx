@@ -31,7 +31,7 @@ const Home = () => {
             <Header />
             <WelcomeText />
             <SearchBox />
-            <div className="mb-8 flex flex-row justify-between">
+            <div className="mb-8 mt-14 flex flex-row justify-between">
                 <h5 className="text-3xl text-primaryColor font-bold dark:text-primaryColorYellow dark:text-gray-300">
                     Top Rated <span className="font-bold text-2xl">...</span>
                 </h5>
