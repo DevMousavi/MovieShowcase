@@ -3,7 +3,7 @@ import Header from "../Layout/Header.jsx";
 import WelcomeText from "../components/WelcomeText.jsx";
 import SearchBox from "../components/SearchBox.jsx";
 import Card from "../components/Card.jsx";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { TopRatedMovieContext } from "../context/TopRatedMovieContext.jsx";
 import Footer from "../Layout/Footer.jsx";
 
@@ -36,7 +36,6 @@ const Home = () => {
                     Top Rated <span className="font-bold text-2xl">...</span>
                 </h5>
                 <NavLink to="top-rated">
-                    {" "}
                     <p className="text-xl cursor-pointer transition-Primary text-primaryColor font-bold  border-primaryColor px-5 py-1 rounded-xl hover:text-black hover:scale-110 dark:text-gray-300 dark:hover:text-pink-700 ">
                         More...
                     </p>
@@ -46,17 +45,16 @@ const Home = () => {
                 {loading ? (
                     <h1>Loading</h1>
                 ) : (
-                    data
-                        .slice(0, 4)
-                        .map((item) => (
+                    data.slice(0, 4).map((item) => (
+                        <Link to={`/about-movie/${item.id}`} key={item.id}>
                             <Card
-                                key={item.id}
                                 title={item.title}
                                 releaseDate={item.release_date}
                                 userScore={item.vote_average}
                                 img={item.poster_path}
                             />
-                        ))
+                        </Link>
+                    ))
                 )}
             </div>
             <Footer />

@@ -9,7 +9,6 @@ const SearchBox = () => {
 
     const searchHandler = (event) => {
         event.preventDefault();
-        console.log("Submitted...");
 
         const fetchData = async () => {
             if (valueInput !== "") {
@@ -17,8 +16,6 @@ const SearchBox = () => {
                     `/search/movie?${apiKey}&query=${valueInput}&page=1`
                 );
                 setSearched(response.results);
-
-                console.log("line 19 :", searched);
             } else {
                 console.log("Please Type Movie Name");
             }

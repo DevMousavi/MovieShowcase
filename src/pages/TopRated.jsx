@@ -4,6 +4,7 @@ import Footer from "../Layout/Footer.jsx";
 import Card from "../components/Card.jsx";
 import { TopRatedMovieContext } from "../context/TopRatedMovieContext.jsx";
 import NumberPageHandler from "../components/NumberPageHandler.jsx";
+import { Link } from "react-router-dom";
 
 const TopRated = () => {
     const primaryData = useContext(TopRatedMovieContext);
@@ -38,13 +39,15 @@ const TopRated = () => {
                         <h1>Loading</h1>
                     ) : (
                         data.map((item) => (
-                            <Card
-                                key={item.id}
-                                title={item.title}
-                                releaseDate={item.release_date}
-                                userScore={item.vote_average}
-                                img={item.poster_path}
-                            />
+                            <Link to={`/about-movie/${item.id}`} key={item.id}>
+                                <Card
+                                    key={item.id}
+                                    title={item.title}
+                                    releaseDate={item.release_date}
+                                    userScore={item.vote_average}
+                                    img={item.poster_path}
+                                />
+                            </Link>
                         ))
                     )}
                 </div>

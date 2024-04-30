@@ -33,14 +33,14 @@ const Header = () => {
                 </li>
             </ul>
             <div className=" flex justify-end items-center">
-                <ul className="flex items-center justify-end gap-0 text-primaryColor dark:text-primaryColorYellow dark:text-gray-300">
+                {/* <ul className="flex items-center justify-end gap-0 text-primaryColor dark:text-primaryColorYellow dark:text-gray-300">
                     <li className="btn hover:btn-Hover  dark:hover:bg-pink-700">
                         <NavLink to="/login">Login</NavLink>
                     </li>
                     <li className="btn hover:btn-Hover  dark:hover:bg-pink-700">
                         <NavLink to="/sing-up">Sing Up</NavLink>
                     </li>
-                </ul>
+                </ul> */}
                 <FaMoon
                     onClick={changeHandler}
                     title="Mode.."

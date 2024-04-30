@@ -10,6 +10,7 @@ import TopRated from "./pages/TopRated.jsx";
 import TopRatedMovieContextProvider from "./context/TopRatedMovieContext.jsx";
 import PapularMovieContextProvider from "./context/PapularMovieContext.jsx";
 import PapularPeopleContextProvider from "./context/PapularPeopleContext.jsx";
+import AboutMovie from "./components/AboutMovie.jsx";
 
 const App = () => {
     return (
@@ -47,6 +48,7 @@ const App = () => {
                         </PapularPeopleContextProvider>
                     }
                 />
+                <Route path="/about-movie/:id" element={<AboutMovie />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/sing-up" element={<SingUp />} />
                 <Route path="*" element={<ErrorHandler />} />

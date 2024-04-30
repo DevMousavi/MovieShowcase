@@ -4,6 +4,7 @@ import Footer from "../Layout/Footer.jsx";
 import { PapularMovieContext } from "../context/PapularMovieContext.jsx";
 import Card from "../components/Card.jsx";
 import NumberPageHandler from "../components/NumberPageHandler.jsx";
+import { Link } from "react-router-dom";
 
 const PapularMovie = () => {
     const primaryData = useContext(PapularMovieContext);
@@ -37,13 +38,14 @@ const PapularMovie = () => {
                     <h1>Loading</h1>
                 ) : (
                     data.map((item) => (
-                        <Card
-                            key={item.id}
-                            title={item.title}
-                            releaseDate={item.release_date}
-                            userScore={item.vote_average}
-                            img={item.poster_path}
-                        />
+                        <Link to={`/about-movie/${item.id}`} key={item.id}>
+                            <Card
+                                title={item.title}
+                                releaseDate={item.release_date}
+                                userScore={item.vote_average}
+                                img={item.poster_path}
+                            />
+                        </Link>
                     ))
                 )}
             </main>
