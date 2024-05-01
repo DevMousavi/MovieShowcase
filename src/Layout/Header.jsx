@@ -5,7 +5,9 @@ import { FaBars } from "react-icons/fa6";
 
 const Header = () => {
     const changeHandler = () => {
-        if (localStorage.getItem("mode") === "light") {
+        const mode = localStorage.getItem("mode");
+
+        if (mode === "light") {
             document.documentElement.classList.add("dark");
             localStorage.setItem("mode", "dark");
         } else {
@@ -13,6 +15,14 @@ const Header = () => {
             localStorage.setItem("mode", "light");
         }
     };
+
+    React.useEffect(() => {
+        const mode = localStorage.getItem("mode");
+
+        if (mode === "dark") {
+            document.documentElement.classList.add("dark");
+        }
+    }, []);
 
     const boxPages = document.querySelector(".backGround-Gradient");
     const showBaxPages = () => {
