@@ -14,6 +14,7 @@ export default {
             center: true,
         },
         screens: {
+            at: "200px",
             am: "350px",
             sm: "640px",
             md: "768px",

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaMoon } from "react-icons/fa";
+import { FaBars } from "react-icons/fa6";
 
 const Header = () => {
     const changeHandler = () => {
@@ -15,20 +16,21 @@ const Header = () => {
 
     return (
         <header className="w-full grid grid-flow-col grid-cols-2 items-center justify-between px-14 py-2 mb-14 font-bold shadow-primaryShadow rounded-xl ">
-            <ul className="flex items-center gap-7 text-primaryColor dark:text-gray-300">
-                <li>
+            <ul className="flex items-center gap-7 text-primaryColor at:w-full dark:text-gray-300">
+                <li className=" at:flex at:w-full at:items-center at:justify-between lg:w-14">
+                    <FaBars className="text-xl  cursor-pointer transition-all ease-in duration-700 hover:primary-rotate lg:hidden dark:text-gray-300 dark:hover:text-orange-600" />
                     <NavLink to="/">
                         <img
-                            className="w-12 transition-Primary hover:scale-125 "
+                            className="lg:w-12 transition-Primary hover:scale-125 at:w-9  lg:block"
                             src="../../public/Logo-MovieShowcase.png"
                             alt="Logo-MovieShowcase.png"
                         />
                     </NavLink>
                 </li>
-                <li className="btn hover:btn-Hover dark:hover:bg-pink-700">
+                <li className="btn hover:btn-Hover dark:hover:bg-pink-700 at:hidden  lg:block">
                     <NavLink to="/papular-movie">Papular Movie</NavLink>
                 </li>
-                <li className="btn hover:btn-Hover  dark:hover:bg-pink-700">
+                <li className="btn hover:btn-Hover  dark:hover:bg-pink-700 at:hidden  lg:block">
                     <NavLink to="/papular-people">Papular People</NavLink>
                 </li>
             </ul>
