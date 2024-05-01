@@ -93,6 +93,23 @@
     .primary-rotate {
         transform: rotate(900deg);
     }
+    .backGround-Gradient {
+        background: rgb(124, 58, 237);
+        background: linear-gradient(
+            0deg,
+            rgba(124, 58, 237, 1) 0%,
+            rgba(209, 191, 228, 0.008841036414565795) 74%
+        );
+        margin: -54px 0px 0px 50px;
+    }
+    .backGround-Gradient-Dark {
+        background: rgb(190, 24, 93);
+        background: linear-gradient(
+            0deg,
+            rgba(190, 24, 93, 1) 0%,
+            rgba(209, 191, 228, 0.008841036414565795) 74%
+        );
+    }
 }
 
 * {
