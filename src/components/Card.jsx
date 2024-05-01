@@ -14,7 +14,7 @@ const Card = (props) => {
                 {`${removeDecimal(props.userScore * 10)}%`}
             </p>
             <span className="w-60 m-auto">
-                <h3 className="text-black font-bold text-xl mb-1 mt-8 dark:text-white">
+                <h3 className="text-black font-bold text-lg mb-1 mt-8 dark:text-white">
                     {props.title}
                 </h3>
                 <h4

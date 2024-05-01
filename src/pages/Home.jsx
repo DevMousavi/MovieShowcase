@@ -32,16 +32,16 @@ const Home = () => {
             <WelcomeText />
             <SearchBox />
             <div className="mb-8 mt-14 flex flex-row justify-between">
-                <h5 className="text-3xl text-primaryColor font-bold dark:text-primaryColorYellow dark:text-gray-300">
+                <h5 className="text-primaryColor font-bold dark:text-primaryColorYellow dark:text-gray-300 am:text-base sm:text-lg md:text-3xl">
                     Top Rated <span className="font-bold text-2xl">...</span>
                 </h5>
                 <NavLink to="top-rated">
-                    <p className="text-xl cursor-pointer transition-Primary text-primaryColor font-bold  border-primaryColor px-5 py-1 rounded-xl hover:text-black hover:scale-110 dark:text-gray-300 dark:hover:text-pink-700 ">
+                    <p className="cursor-pointer transition-Primary text-primaryColor font-bold  border-primaryColor px-5 py-1 rounded-xl hover:text-black hover:scale-110 dark:text-gray-300 dark:hover:text-pink-700 am:text-base sm:text-lg md:text-3xl">
                         More...
                     </p>
                 </NavLink>
             </div>
-            <div className="w-full flex flex-wrap justify-between gap-y-10">
+            <div className="w-full flex flex-wrap md:justify-between am:gap-4 md:gap-y-10">
                 {loading ? (
                     <h1>Loading</h1>
                 ) : (

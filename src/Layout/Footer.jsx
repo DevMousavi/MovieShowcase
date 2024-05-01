@@ -9,7 +9,7 @@ const Footer = () => {
             <a
                 href="https://t.me/DevMousavi"
                 target="_blank"
-                className="flex items-center gap-1 dark:transition-Primary dark:text-gray-300 dark:hover:text-pink-700"
+                className="sm:flex items-center gap-1 dark:transition-Primary dark:text-gray-300 dark:hover:text-pink-700 at:hidden"
             >
                 <FaTelegram />
                 DevMousavi
@@ -21,7 +21,7 @@ const Footer = () => {
             <a
                 href="https://github.com/DevMousavi"
                 target="_blank"
-                className="flex items-center gap-[2px] dark:transition-Primary dark:text-gray-300 dark:hover:text-pink-700"
+                className="sm:flex items-center gap-[2px] dark:transition-Primary dark:text-gray-300 dark:hover:text-pink-700 at:hidden"
             >
                 <FaGithub /> DevMousavi
             </a>

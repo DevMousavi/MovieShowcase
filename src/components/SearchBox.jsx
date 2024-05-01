@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import api, { apiKey } from "../sevices/config";
 import BoxMovieSearched from "./BoxMovieSearched.jsx";
@@ -8,8 +8,6 @@ const SearchBox = () => {
     const [searched, setSearched] = useState([]);
 
     const searchHandler = (event) => {
-        event.preventDefault();
-
         const fetchData = async () => {
             if (valueInput !== "") {
                 const response = await api.get(
@@ -17,34 +15,46 @@ const SearchBox = () => {
                 );
                 setSearched(response.results);
             } else {
-                console.log("Please Type Movie Name");
+                setSearched([]);
             }
         };
         fetchData();
     };
 
+    const noneSearchHandler = (event) => {
+        if (event.keyCode == 8 && valueInput === "") {
+            setSearched([]);
+        }
+    };
+
     return (
         <>
-            <form
-                onSubmit={searchHandler}
-                className=" w-full h-10 flex justify-between "
-            >
+            <div className=" w-full h-10 flex justify-between ">
                 <input
                     type="text"
                     placeholder="Enter Movie Name..."
                     className="w-[78%] outline-none box-shadow-input px-6 py-2 rounded-lg text-lg"
                     value={valueInput}
-                    onChange={(event) => setValueInput(event.target.value)}
+                    onChange={(event) => {
+                        setValueInput(event.target.value);
+                    }}
+                    // onKeyDown={searchHandler}
+                    onKeyDown={(event) => {
+                        searchHandler(event);
+                        noneSearchHandler(event);
+                    }}
                 />
 
                 <button
-                    type="submit"
+                    onClick={searchHandler}
                     className="w-[20%] h-full rounded-full searchBoxShadow flex items-center justify-center gap-3 text-white bg-primaryColor cursor-pointer transition hover:scale-110 dark:bg-pink-700 "
                 >
-                    <p className="text-2xl">Search</p>
-                    <IoSearchOutline className="w-10 h-full rounded-lg px-1 text-shadow " />
+                    <p className="md:text-xl text-2xl sm:text-base am:hidden sm:block">
+                        Search
+                    </p>
+                    <IoSearchOutline className="md:w-10 h-full rounded-lg px-1 text-shadow am:w-8 " />
                 </button>
-            </form>
+            </div>
             {searched.length > 0 && <BoxMovieSearched searched={searched} />}
         </>
     );
