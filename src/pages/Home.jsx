@@ -12,6 +12,19 @@ const Home = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const [showAlert, setShowAlert] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowAlert(true);
+        }, 3000);
+        const timerDelete = setTimeout(() => {
+            setShowAlert(false);
+        }, 9000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     useEffect(() => {
         const fetchData = () => {
             try {
@@ -28,6 +41,13 @@ const Home = () => {
 
     return (
         <main>
+            {showAlert && (
+                <h3 className="bg-primaryColor text-white am:p-3 sm:p-5 am:rounded-2xl am:rounded-t-none sm:rounded-xl sm:rounded-t-none box-shadow-alert am:w-72 sm:w-[500px] absolute top-0 left-1/2 transform -translate-x-1/2 justify-center items-center dark:bg-pink-700">
+                    Should the images fail to load, we recommend utilizing a VPN
+                    for uninterrupted browsing experience...
+                </h3>
+            )}
+
             <Header />
             <WelcomeText />
             <SearchBox />

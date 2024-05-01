@@ -1,6 +1,7 @@
 import React from "react";
 import { removeDecimal } from "../helper/removeDecimal";
 import { baseURLImage } from "../sevices/config.js";
+import { checkWordCount } from "../helper/checkWordCount.js";
 
 const Card = (props) => {
     const image = baseURLImage + props.img;
@@ -14,8 +15,11 @@ const Card = (props) => {
                 {`${removeDecimal(props.userScore * 10)}%`}
             </p>
             <span className="w-60 m-auto">
-                <h3 className="text-black font-bold text-lg mb-1 mt-8 dark:text-white">
-                    {props.title}
+                <h3
+                    title={props.title}
+                    className="text-black font-bold text-lg mb-1 mt-8 dark:text-white"
+                >
+                    {checkWordCount(props.title)}
                 </h3>
                 <h4
                     title="Release Date"
