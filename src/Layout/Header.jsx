@@ -1,3 +1,5 @@
+import img from "../assets/Images/LogoMovieShowcase.png";
+
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaMoon } from "react-icons/fa";
@@ -41,8 +43,8 @@ const Header = () => {
                         <NavLink to="/">
                             <img
                                 className="lg:w-12 transition-Primary hover:scale-125 at:w-9  lg:block"
-                                src="../../public/Logo-MovieShowcase.png"
-                                alt="Logo-MovieShowcase.png"
+                                src={img}
+                                alt="Logo.png"
                             />
                         </NavLink>
                     </li>
